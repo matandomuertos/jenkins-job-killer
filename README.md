@@ -18,8 +18,14 @@ You can install Jenkins Job Killer by downloading the binary from the releases p
 
 Run the following command to download and install Jenkins Job Killer:
 
+#### Intel
 ```sh
-curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/download/v0.0.2/jjkiller && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/
+curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/download/latest/jjkiller_intel && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/jjkiller
+```
+
+#### ARM
+```sh
+curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/download/latest/jjkiller_amd && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/jjkiller
 ```
 
 ## Usage
@@ -62,7 +68,7 @@ jjkiller --url http://your-jenkins-url -u your-username -p your-password --queue
 jjkiller --url http://your-jenkins-url -u your-username -p your-password --time-out 6
 ```
 
-#### Dry Run (No Builds Will Be Stopped)
+#### Dry Run (No Builds Will Be Stopped or cancelled)
 
 ```sh
 jjkiller --url http://your-jenkins-url -u your-username -p your-password --dry-run
