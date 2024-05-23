@@ -20,12 +20,12 @@ Run the following command to download and install Jenkins Job Killer:
 
 #### Intel
 ```sh
-curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/download/latest/jjkiller_intel && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/jjkiller
+curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/latest/download/jjkiller_intel && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/jjkiller
 ```
 
 #### ARM
 ```sh
-curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/download/latest/jjkiller_amd && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/jjkiller
+curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/latest/download/jjkiller_arm && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/jjkiller
 ```
 
 ## Usage
@@ -40,13 +40,14 @@ jjkiller --url http://your-jenkins-url -u your-username -p your-password
 
 ### Options
 
-- `-url`, `--url`: Specify the Jenkins server URL (required)
-- `-u`, `--user`: Specify the Jenkins username (required)
-- `-p`, `--password`: Specify the Jenkins password or token (required)
-- `--queue`: Cleans up queued builds
-- `--version`: Print the Jenkins server version
-- `--time-out`, `-t`: Set the timeout (in hours) for builds that need to be stopped (default: 4 hours)
-- `--dry-run`: Run in dry mode, no builds will be stopped
+- `-url`, `--url`: Specify Jenkins server URL (required)
+- `-u`, `--user`: Specify Jenkins user (required)
+- `-p`, `--password`: Specify Jenkins password or token (required)
+- `--queue`: Clean up queued builds
+- `--jenkins-version`: Print Jenkins server version
+- `--version`: Print jjkiller version and exit
+- `--time-out`, `-t`: Set timeout for stopping builds in hours (default: 4)
+- `--dry-run`: Run in dry mode (no actions will be taken)
 
 ### Examples
 

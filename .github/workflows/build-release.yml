@@ -26,7 +26,7 @@ jobs:
       uses: actions/upload-artifact@v4.3.3
       with:
         name: jjkiller_arm
-        path: dist/*
+        path: dist/jjkiller_arm
 
   build-intel:
     runs-on: macos-11
@@ -48,7 +48,7 @@ jobs:
       uses: actions/upload-artifact@v4.3.3
       with:
         name: jjkiller_intel
-        path: dist/*
+        path: dist/jjkiller_intel
 
   combine-binaries:
     runs-on: macos-latest
