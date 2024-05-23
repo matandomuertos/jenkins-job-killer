@@ -2,6 +2,7 @@ import jenkins
 from tabulate import tabulate
 from urllib.parse import urlparse
 from .common_utils import get_running_time, timeout
+import sys
 
 def running_builds(server, killtime, buildlist):
     running_builds = get_running_builds(server)
@@ -31,7 +32,7 @@ def get_running_builds(server, max_retries: int = 10):
         except jenkins.JenkinsException as e:
             print(f"Error: {e}. Retrying... ({attempt + 1}/{max_retries})")
     print(f"Failed to get the running builds after {max_retries} retries.")
-    exit()
+    sys.exit()
 
 def parse_build_data(build, server):
     build_name = parse_build_url(build['url'])

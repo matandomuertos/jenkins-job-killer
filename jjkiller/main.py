@@ -3,13 +3,14 @@ from jjkiller.cli_utils import parse_args
 from jjkiller.jenkins_utils import server_connection
 from jjkiller.queue_utils import queued_builds, kill_job
 from jjkiller.builds_utils import running_builds, kill_build
+import sys
 
 def main():
     args = parse_args()
 
     if args.version:
         print("0.0.2")
-        exit()
+        sys.exit()
 
     if args.dry_run:
         print("Running in dry mode, nothing will be stopped or cancelled")
