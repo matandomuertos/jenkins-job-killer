@@ -1,8 +1,8 @@
 import jenkins
-from .cli_utils import parse_args
-from .jenkins_utils import server_connection
-from .queue_utils import queued_builds, kill_job
-from .builds_utils import running_builds, kill_build
+from jjkiller.cli_utils import parse_args
+from jjkiller.jenkins_utils import server_connection
+from jjkiller.queue_utils import queued_builds, kill_job
+from jjkiller.builds_utils import running_builds, kill_build
 
 def main():
     args = parse_args()
