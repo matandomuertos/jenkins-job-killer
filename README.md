@@ -12,14 +12,14 @@ Jenkins Job Killer is a Python script designed to manage and terminate Jenkins j
 
 ## Installation
 
-You can install Jenkins Job Killer by downloading the binary from the releases page and placing it in your `/usr/local/bin` directory.
+You can install Jenkins Job Killer by downloading the binary from the releases page (only available for MacOs) and placing it in your `/usr/local/bin` directory.
 
 ### Using curl
 
 Run the following command to download and install Jenkins Job Killer:
 
 ```sh
-curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/download/v0.0.1/jjkiller && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/
+curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/download/v0.0.2/jjkiller && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/
 ```
 
 ## Usage
@@ -37,7 +37,7 @@ jjkiller --url http://your-jenkins-url -u your-username -p your-password
 - `-url`, `--url`: Specify the Jenkins server URL (required)
 - `-u`, `--user`: Specify the Jenkins username (required)
 - `-p`, `--password`: Specify the Jenkins password or token (required)
-- `--queue`: Print the list of current queued jobs
+- `--queue`: Cleans up queued builds
 - `--version`: Print the Jenkins server version
 - `--time-out`, `-t`: Set the timeout (in hours) for builds that need to be stopped (default: 4 hours)
 - `--dry-run`: Run in dry mode, no builds will be stopped
@@ -50,7 +50,7 @@ jjkiller --url http://your-jenkins-url -u your-username -p your-password
 jjkiller --url http://your-jenkins-url -u your-username -p your-password --version
 ```
 
-#### List Queued Jobs
+#### Terminate Queued Jobs And Build Running Over 6 Hours
 
 ```sh
 jjkiller --url http://your-jenkins-url -u your-username -p your-password --queue
