@@ -7,6 +7,10 @@ from jjkiller.builds_utils import running_builds, kill_build
 def main():
     args = parse_args()
 
+    if args.version:
+        print("0.0.2")
+        exit()
+
     if args.dry_run:
         print("Running in dry mode, nothing will be stopped or cancelled")
 
@@ -17,7 +21,7 @@ def main():
 
     print("Successfully logged as", server.get_whoami()['id'])
 
-    if args.version:
+    if args.jenkins_version:
         print("Jenkins server version:", server.get_version())
 
     queue_list = []
