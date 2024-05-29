@@ -12,20 +12,27 @@ Jenkins Job Killer is a Python script designed to manage and terminate Jenkins j
 
 ## Installation
 
-You can install Jenkins Job Killer by downloading the binary from the releases page (only available for MacOs) and placing it in your `/usr/local/bin` directory.
+You can install Jenkins Job Killer by downloading the binary from the releases page and placing it in your `/usr/local/bin` directory.
 
 ### Using curl
 
 Run the following command to download and install Jenkins Job Killer:
 
-#### Intel
+#### Mac
+
+##### Intel
 ```sh
-curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/latest/download/jjkiller_intel && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/jjkiller
+curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/latest/download/jjkiller_darwin_amd64 && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/jjkiller
 ```
 
-#### ARM
+##### ARM
 ```sh
-curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/latest/download/jjkiller_arm && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/jjkiller
+curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/latest/download/jjkiller_darwin_arm64 && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/jjkiller
+```
+
+#### Linux
+```sh
+curl -L -o jjkiller https://github.com/matandomuertos/jenkins-job-killer/releases/latest/download/jjkiller_linux_amd64 && chmod +x jjkiller && sudo mv jjkiller /usr/local/bin/jjkiller
 ```
 
 ## Usage
