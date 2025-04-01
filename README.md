@@ -109,7 +109,7 @@ jjkiller --url http://your-jenkins-url -u your-username -p your-password --dry-r
 3. Run the script
 
    ```sh
-   python src/jobKiller.py --url http://your-jenkins-url -u your-username -p your-password
+   python -m jjkiller.main --url http://your-jenkins-url -u your-username -p your-password
    ```
 
 ## Contributing
